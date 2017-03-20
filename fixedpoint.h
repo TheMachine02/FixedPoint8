@@ -12,6 +12,8 @@ const fix8_t fix8_one = 0x000100;
 #define fix8_ceil(x)  x&0xFFFF00UL + (x&0x0000FF? fix8_one :0)
 #define fix8_min(x,y) (x < y ? x : y)
 #define fix8_max(x,y) (x > y ? x : y)
+#define fix8_add(x,y) (x+y)
+#define fix8_sub(x,y) (x-y)
 #define fix8_clamp(x,lo,hi) fix8_min(fix8_max(x, lo), hi)
 #define fix8_abs(x) (x < 0 ? -x : x)
 
